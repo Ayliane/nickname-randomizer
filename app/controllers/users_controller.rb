@@ -5,7 +5,7 @@ class UsersController < ApplicationController
       User.create!(user_params)
       render json: 'OK', status: :ok
     rescue ActiveRecord::RecordInvalid => _
-      user = User.generate_nickname(user_params)
+      user = User.generate_nickname
       render json: user.nickname, status: :ok
     end
   end
