@@ -1,25 +1,6 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+To run specs, just run `rspec spec`
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# nickname-randomizer
+Post to `http://localhost:3000/users` with `nickname` parameter.
+`nickname` should be a 3 letters string, upcase.

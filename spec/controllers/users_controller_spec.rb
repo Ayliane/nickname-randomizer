@@ -20,7 +20,7 @@ RSpec.describe UsersController, type: :controller do
       end
 
       it 'should return a new nickname' do
-        post :create, params: { nickname: username }
+        expect{post :create, params: { nickname: username }}.to change{User.count}.by(1)
         expect(response.status).to eq(200)
         expect(response.body).not_to eq('OK')
         expect(response.body).not_to eq('BCA')
